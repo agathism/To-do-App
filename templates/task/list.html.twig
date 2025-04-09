@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TaskController!{% endblock %}
+
+{% block body %}
+    <h1>Hello ✅</h1>
+    <div>
+        <ul>
+            {% for task in tasks %}
+                <div>
+                <h2> {{ task.title }}
+                     </h2>
+                    <p>{{ task.description }}</p>
+                    <p>{{ task.createdAt|date('Y-m-d') }}</p>
+                    <p>{{ task.dueDate|date('Y-m-d') }}</p>
+                     {#
+                    <p>{{ task.category }}</p>
+                     #}
+                </div>
+            {% endfor %}
+        </ul>
+{% endblock %}
